@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>QA Next · Curso de Qualidade de Software, Automação de Testes e IA — Impacta × Olhar Digital</title>
+<meta name="description" content="Imersão online ao vivo da Impacta: fundamentos de qualidade de software, automação de testes com Playwright e IA aplicada ao QA — com sábado intensivo de preparação para a certificação ISTQB® CTFL. 5 noites + sábado, agosto de 2026. Lote pioneiro R$ 697.">
+<meta name="keywords" content="curso QA, qualidade de software, automação de testes, Playwright, CTFL, ISTQB, IA para QA, teste de software, curso de testes, Impacta">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta name="author" content="Faculdade Impacta">
+<meta name="theme-color" content="#05080F">
+<link rel="canonical" href="https://qanext.impacta.com.br/">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="Impacta">
+<meta property="og:url" content="https://qanext.impacta.com.br/">
+<meta property="og:title" content="QA Next · Qualidade, Automação e Inteligência Artificial">
+<meta property="og:description" content="Torne-se o profissional de qualidade que a era da IA exige. Imersão ao vivo: 5 noites + sábado CTFL Sprint. Impacta × Olhar Digital.">
+<meta property="og:image" content="https://qanext.impacta.com.br/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="QA Next — Qualidade, Automação e Inteligência Artificial · Impacta × Olhar Digital">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="QA Next · Qualidade, Automação e Inteligência Artificial">
+<meta name="twitter:description" content="Imersão online ao vivo: 5 noites + sábado CTFL Sprint. Fundamentos, Playwright, IA aplicada ao QA. Impacta × Olhar Digital.">
+<meta name="twitter:image" content="https://qanext.impacta.com.br/assets/og-image.png">
+
+<!-- Structured data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Course",
+  "name": "QA Next — Qualidade, Automação e Inteligência Artificial",
+  "description": "Imersão online ao vivo em qualidade de software: fundamentos de QA, test design, automação com Playwright e API, IA generativa aplicada e preparação para a certificação ISTQB CTFL.",
+  "provider": {
+    "@type": "EducationalOrganization",
+    "name": "Faculdade Impacta",
+    "url": "https://www.impacta.edu.br/"
+  },
+  "inLanguage": "pt-BR",
+  "courseMode": "online",
+  "educationalCredentialAwarded": "Certificado de conclusão Impacta",
+  "teaches": "Qualidade de software, test design, testes de API com Postman, automação com Playwright, CI com GitHub Actions, IA generativa aplicada a QA, preparação CTFL",
+  "hasCourseInstance": {
+    "@type": "CourseInstance",
+    "courseMode": "online",
+    "courseWorkload": "PT21H",
+    "startDate": "2026-08-03",
+    "endDate": "2026-08-08"
+  },
+  "offers": [
+    {"@type": "Offer", "name": "Lote pioneiro", "price": "697", "priceCurrency": "BRL", "availability": "https://schema.org/LimitedAvailability", "validFrom": "2026-06-20", "priceValidUntil": "2026-07-04", "url": "https://qanext.impacta.com.br/#investimento"},
+    {"@type": "Offer", "name": "Lote regular", "price": "897", "priceCurrency": "BRL", "availability": "https://schema.org/PreOrder", "validFrom": "2026-07-05", "priceValidUntil": "2026-07-19", "url": "https://qanext.impacta.com.br/#investimento"},
+    {"@type": "Offer", "name": "Reta final", "price": "997", "priceCurrency": "BRL", "availability": "https://schema.org/PreOrder", "validFrom": "2026-07-20", "priceValidUntil": "2026-08-02", "url": "https://qanext.impacta.com.br/#investimento"}
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type": "Question", "name": "Preciso saber programar?", "acceptedAnswer": {"@type": "Answer", "text": "Não. O curso é acessível a iniciantes, com laboratórios guiados. Familiaridade básica com tecnologia ajuda, mas a automação é introduzida de forma orientada."}},
+    {"@type": "Question", "name": "O curso garante aprovação na prova CTFL?", "acceptedAnswer": {"@type": "Answer", "text": "Não. O sábado CTFL Sprint orienta a preparação, mede sua prontidão com simulados e ajuda a definir um plano de estudo. Não existe promessa de aprovação automática, e o curso não substitui um treinamento CTFL oficial credenciado."}},
+    {"@type": "Question", "name": "Qual a diferença entre o certificado do curso e a certificação CTFL?", "acceptedAnswer": {"@type": "Answer", "text": "Você recebe o certificado de conclusão da Impacta ao cumprir presença e entregas. A certificação ISTQB CTFL é uma prova externa, realizada e paga separadamente pelo aluno junto ao órgão certificador."}},
+    {"@type": "Question", "name": "As aulas ficam gravadas?", "acceptedAnswer": {"@type": "Answer", "text": "Sim. As aulas são ao vivo e ficam disponíveis em gravação pelo período definido pela instituição, junto com workbook, templates e materiais de apoio."}},
+    {"@type": "Question", "name": "Quais ferramentas vou usar?", "acceptedAnswer": {"@type": "Answer", "text": "Postman, Playwright, GitHub, GitHub Actions e uma ferramenta de IA generativa autorizada. Você precisará de notebook com internet, conta no GitHub, VS Code e Node.js instalados."}},
+    {"@type": "Question", "name": "É ao vivo ou gravado? Qual o horário?", "acceptedAnswer": {"@type": "Answer", "text": "100% online ao vivo. As cinco noites acontecem de 3 a 7 de agosto de 2026, das 19h às 22h. O sábado CTFL Sprint é em 08/08, das 9h às 12h e das 14h às 17h."}}
+  ]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- animated page background -->
+<div class="page-bg" aria-hidden="true">
+  <div class="page-bg__orb o1"></div>
+  <div class="page-bg__orb o2"></div>
+</div>
+
+<!-- ===================== NAV ===================== -->
+<nav class="nav">
+  <div class="wrap nav-in">
+    <a class="brand" href="#top" aria-label="QA Next · Impacta e Olhar Digital">
+      <img class="colock" src="assets/impacta-olhar-lockup.webp" alt="Impacta × Olhar Digital">
+    </a>
+    <div class="nav-links">
+      <a href="#programa">Programa</a>
+      <a href="#case">Case</a>
+      <a href="#datas">Datas</a>
+      <a href="#investimento">Investimento</a>
+      <a href="#faq">FAQ</a>
+    </div>
+    <div class="nav-cta">
+      <a href="#investimento" class="btn btn-primary">Garantir minha vaga</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ===================== HERO ===================== -->
+<header class="hero" id="top">
+  <div class="hero__fx" aria-hidden="true">
+    <div class="fx-grid"></div>
+    <div class="fx-beam"></div>
+    <div class="fx-orb a"></div>
+    <div class="fx-orb b"></div>
+  </div>
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow">Imersão online ao vivo · Impacta × Olhar Digital</span>
+      <div class="qa qa--lg">
+        <span class="qa__mk"><svg viewBox="0 0 32 32"><path d="M8 17l5 5 11-13"/></svg></span>
+        <span class="qa__tx"><b>QA</b><em>Next</em></span>
+      </div>
+      <h1>Qualidade, <span class="grad">Automação</span> <i class="amp">e</i><br><span class="grad">Inteligência Artificial</span></h1>
+      <p class="sub">Cinco noites ao vivo e um sábado intensivo de preparação CTFL — método prático, um produto real para testar e entregáveis prontos para aplicar no trabalho no dia seguinte.</p>
+      <div class="chips">
+        <span class="chip"><span class="dot lv"></span>Ao vivo, de verdade</span>
+        <span class="chip"><span class="dot"></span>21 horas · 5 noites + sábado</span>
+        <span class="chip"><span class="dot"></span>3 a 8 de agosto de 2026</span>
+        <span class="chip"><span class="dot"></span>Vagas limitadas</span>
+      </div>
+      <div class="hero-cta">
+        <a href="#investimento" class="btn btn-primary btn-lg">Garantir minha vaga
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a href="#programa" class="btn btn-ghost btn-lg">Ver a grade completa</a>
+      </div>
+      <p class="hero-note">Lote pioneiro · <b>R$ 697</b> · abertura em 20/06 · enquanto houver vagas</p>
+    </div>
+
+    <!-- esteira de qualidade animada (pipeline + quality gate) -->
+    <div class="autoviz" aria-hidden="true">
+      <div class="av-pipeline">
+        <div class="av-rail"><i class="av-pulse"></i></div>
+        <div class="av-stage" style="--d:0s">
+          <span class="av-ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3.2"/><path d="M12 2v6.8M12 15.2V22"/></svg></span>
+          <span class="av-tx"><b>Commit</b><small>código novo</small></span>
+          <span class="av-ok"><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg></span>
+        </div>
+        <div class="av-stage" style="--d:1.6s">
+          <span class="av-ic"><svg viewBox="0 0 24 24"><path d="M12 2l8 4.5v9L12 20l-8-4.5v-9z"/><path d="M12 11l8-4.5M12 11L4 6.5M12 11v9"/></svg></span>
+          <span class="av-tx"><b>Build</b><small>integração contínua</small></span>
+          <span class="av-ok"><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg></span>
+        </div>
+        <div class="av-stage" style="--d:3.2s">
+          <span class="av-ic"><svg viewBox="0 0 24 24"><path d="M16 18l6-6-6-6M8 6l-6 6 6 6"/></svg></span>
+          <span class="av-tx"><b>Testes automatizados</b><small>Playwright · API</small></span>
+          <span class="av-ok"><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg></span>
+        </div>
+        <div class="av-stage gate" style="--d:4.8s">
+          <span class="av-ic"><svg viewBox="0 0 24 24"><path d="M12 2l8 4v6c0 5-3.4 8.6-8 10-4.6-1.4-8-5-8-10V6z"/><path d="M9 12l2 2 4-4"/></svg></span>
+          <span class="av-tx"><b>Quality Gate</b><small>IA + revisão humana</small></span>
+          <span class="av-ok"><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg></span>
+        </div>
+        <div class="av-stage" style="--d:6.4s">
+          <span class="av-ic"><svg viewBox="0 0 24 24"><path d="M5 16c-1.7 0-3-1.3-3-3 0-1.5 1-2.7 2.4-3C4.7 7.2 7.1 5 10 5c2.4 0 4.5 1.5 5.4 3.6.2 0 .4-.1.6-.1 2.2 0 4 1.8 4 4s-1.8 4-4 4z"/><path d="M12 19v-6M9.5 15.5L12 13l2.5 2.5"/></svg></span>
+          <span class="av-tx"><b>Deploy confiável</b><small>evidências do release</small></span>
+          <span class="av-ok"><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg></span>
+        </div>
+      </div>
+      <div class="av-side">
+        <div class="av-gauge">
+          <svg viewBox="0 0 120 120">
+            <circle class="bgc" cx="60" cy="60" r="50"/>
+            <circle class="fgc" cx="60" cy="60" r="50"/>
+          </svg>
+          <div class="av-gval">98<small>%</small></div>
+          <span class="av-glab">quality score</span>
+        </div>
+        <div class="av-gear">
+          <svg viewBox="0 0 24 24"><path d="M12 8.5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7z"/><path d="M19.4 13.5c.1-.5.1-1 .1-1.5s0-1-.1-1.5l2.1-1.6-2-3.5-2.5 1a8 8 0 0 0-2.6-1.5L14 2h-4l-.4 2.9a8 8 0 0 0-2.6 1.5l-2.5-1-2 3.5L4.6 10.5c-.1.5-.1 1-.1 1.5s0 1 .1 1.5l-2.1 1.6 2 3.5 2.5-1a8 8 0 0 0 2.6 1.5L10 22h4l.4-2.9a8 8 0 0 0 2.6-1.5l2.5 1 2-3.5z"/></svg>
+        </div>
+        <div class="av-chip"><span class="ok">✓</span> 0 falhas críticas</div>
+        <div class="av-chip c2"><span class="ok">✓</span> cobertura validada</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ===================== TOOLS STRIP ===================== -->
+<section class="tools">
+  <div class="wrap tools-in">
+    <span class="lab">Ferramentas reais do mercado</span>
+    <span class="ti-item"><img class="ti" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg" alt="Postman"><span class="ti-name">Postman</span></span>
+    <span class="ti-item"><img class="ti" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/playwright/playwright-original.svg" alt="Playwright"><span class="ti-name">Playwright</span></span>
+    <span class="ti-item"><img class="ti mono" src="https://cdn.simpleicons.org/github/white" alt="GitHub"><span class="ti-name">GitHub</span></span>
+    <span class="ti-item"><img class="ti" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/githubactions/githubactions-original.svg" alt="GitHub Actions"><span class="ti-name">GitHub Actions</span></span>
+    <span class="ti-item"><img class="ti" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VS Code"><span class="ti-name">VS Code</span></span>
+    <span class="ti-item"><img class="ti" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js"><span class="ti-name">Node.js</span></span>
+  </div>
+</section>
+
+<!-- ===================== RELEVÂNCIA IMPACTA ===================== -->
+<section class="relev reveal">
+  <div class="glow"></div>
+  <div class="wrap">
+    <div class="relev-head">
+      <div>
+        <span class="eyebrow">Por que aprender com a Impacta</span>
+        <h2>A maior escola de tecnologia, gestão e design do Brasil.</h2>
+      </div>
+      <img class="relev-logo" src="assets/impacta-branco.png" alt="Impacta">
+    </div>
+    <div class="relev-grid">
+      <div class="stat"><div class="v">2 milhões</div><div class="l">de alunos formados</div></div>
+      <div class="stat"><div class="v">+30 mil</div><div class="l">empresas confiam em nós</div></div>
+      <div class="stat"><div class="v">90%</div><div class="l">dos nossos alunos empregados</div></div>
+      <div class="stat"><div class="v">100%</div><div class="l">professores atuantes no mercado</div></div>
+    </div>
+    <div class="relev-pts">
+      <div class="rpt">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M12 2l2.4 7.4H22l-6 4.6 2.3 7.4L12 17l-6.3 4.4L8 14 2 9.4h7.6z"/></svg></div>
+        <p><b>Maior escola</b> de tecnologia, gestão e design do Brasil</p>
+      </div>
+      <div class="rpt">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><circle cx="12" cy="9" r="6"/><path d="M9 14l-2 7 5-3 5 3-2-7"/></svg></div>
+        <p><b>Metodologia de ensino</b> e certificação exclusivas</p>
+      </div>
+      <div class="rpt">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M9 13l2 2 4-4"/></svg></div>
+        <p><b>Mais de 90%</b> dos nossos alunos estão empregados</p>
+      </div>
+      <div class="rpt">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M3 11l18-5v12L3 13zM5 13v4a2 2 0 0 0 2 2h2"/></svg></div>
+        <p><b>Eleita 10×</b> o melhor fornecedor de RH</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== PROBLEMA / TRANSFORMAÇÃO ===================== -->
+<section class="sec reveal">
+  <div class="wrap">
+    <div class="sec-head cen">
+      <span class="eyebrow">O contexto</span>
+      <h2>A IA acelera o código — e também pode acelerar os defeitos.</h2>
+      <p>Qualidade não pode começar no fim do desenvolvimento. E IA usada sem método amplia risco, repete lacunas e cria falsa confiança. O QA Next existe para resolver os dois lados.</p>
+    </div>
+    <div class="split">
+      <div class="pcard bad">
+        <span class="tag">Sem método</span>
+        <h3>O que acontece hoje</h3>
+        <ul class="plist">
+          <li><span class="mk">✕</span> Testes pensados só no fim, quando o defeito já custou caro.</li>
+          <li><span class="mk">✕</span> IA gerando cenários sem validação humana nem governança.</li>
+          <li><span class="mk">✕</span> Automação sem critério: muito esforço, pouco valor.</li>
+          <li><span class="mk">✕</span> Preparação para a CTFL dispersa e sem plano.</li>
+        </ul>
+      </div>
+      <div class="pcard good">
+        <span class="tag">Com o QA Next</span>
+        <h3>O que você passa a fazer</h3>
+        <ul class="plist">
+          <li><span class="mk">✓</span> Qualidade orientada a risco, desde o refinamento (Shift Left).</li>
+          <li><span class="mk">✓</span> IA como copiloto — com prompts, avaliação e validação humana.</li>
+          <li><span class="mk">✓</span> Automação com propósito: você sabe o que automatizar primeiro.</li>
+          <li><span class="mk">✓</span> Diagnóstico CTFL e um plano de estudo de 30 dias.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== OUTCOMES ===================== -->
+<section class="sec reveal" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">A transformação</span>
+      <h2>O que você será capaz de fazer ao final.</h2>
+    </div>
+    <div class="out-grid">
+      <div class="out"><div class="n">01</div><h3>Pensar como QA</h3><p>Avaliar risco de produto, revisar requisitos e prevenir defeitos antes de codificar.</p></div>
+      <div class="out"><div class="n">02</div><h3>Desenhar testes melhores</h3><p>Aplicar técnicas fundamentais, critérios de aceite e testes exploratórios com método.</p></div>
+      <div class="out"><div class="n">03</div><h3>Testar APIs</h3><p>Montar uma coleção no Postman e validar contratos, fluxos e cenários de erro.</p></div>
+      <div class="out"><div class="n">04</div><h3>Automatizar o essencial</h3><p>Criar seu primeiro teste com Playwright e entender pipeline com GitHub Actions.</p></div>
+      <div class="out"><div class="n">05</div><h3>Usar IA com método</h3><p>Construir uma biblioteca de prompts para QA e um checklist de validação e governança.</p></div>
+      <div class="out"><div class="n">06</div><h3>Organizar sua jornada CTFL</h3><p>Medir sua prontidão com simulados e sair com um plano de estudo de 30 dias.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== PROGRAMA ===================== -->
+<section class="sec invest reveal" id="programa">
+  <div class="wrap">
+    <div class="sec-head cen">
+      <span class="eyebrow">Programa · 21 horas ao vivo</span>
+      <h2>Cinco noites aplicadas + um sábado CTFL Sprint.</h2>
+      <p>15 horas de formação aplicada à noite, 6 horas de revisão e simulados no sábado. IA integrada de ponta a ponta.</p>
+    </div>
+    <div class="nights" id="datas">
+      <div class="night">
+        <div class="idx"><span class="k">Noite 1</span><span class="num">01</span></div>
+        <div class="body">
+          <h3>Quality Engineering na era da IA</h3>
+          <p>Fundamentos de qualidade, risco de produto, Shift Left e revisão assistida de requisitos.</p>
+          <div class="deliver">→ Entregável: mapa de riscos e perguntas de refinamento</div>
+        </div>
+        <div class="when"><span class="d">Seg, 03/08</span><span class="h">19h às 22h</span></div>
+      </div>
+      <div class="night">
+        <div class="idx"><span class="k">Noite 2</span><span class="num">02</span></div>
+        <div class="body">
+          <h3>Test Design com IA</h3>
+          <p>Critérios de aceite, técnicas de desenho, testes exploratórios e expansão crítica de cenários com IA.</p>
+          <div class="deliver">→ Entregável: catálogo de cenários e tabela de decisão</div>
+        </div>
+        <div class="when"><span class="d">Ter, 04/08</span><span class="h">19h às 22h</span></div>
+      </div>
+      <div class="night">
+        <div class="idx"><span class="k">Noite 3</span><span class="num">03</span></div>
+        <div class="body">
+          <h3>Automation Starter com IA</h3>
+          <p>Estratégia de automação, testes de API, Playwright, GitHub Actions e depuração assistida.</p>
+          <div class="deliver">→ Entregável: coleção Postman e teste automatizado</div>
+        </div>
+        <div class="when"><span class="d">Qua, 05/08</span><span class="h">19h às 22h</span></div>
+      </div>
+      <div class="night">
+        <div class="idx"><span class="k">Noite 4</span><span class="num">04</span></div>
+        <div class="body">
+          <h3>GenAI for QA Lab</h3>
+          <p>Fundamentos de LLMs, engenharia de prompts, avaliação de saídas, alucinações, vieses, privacidade e segurança.</p>
+          <div class="deliver">→ Entregável: biblioteca de prompts e checklist de validação</div>
+        </div>
+        <div class="when"><span class="d">Qui, 06/08</span><span class="h">19h às 22h</span></div>
+      </div>
+      <div class="night">
+        <div class="idx"><span class="k">Noite 5</span><span class="num">05</span></div>
+        <div class="body">
+          <h3>AI-Enabled Quality Operating Model</h3>
+          <p>Agentes, RAG, governança, roadmap de adoção e o desafio integrado (capstone).</p>
+          <div class="deliver">→ Entregável: dossiê final e plano de adoção</div>
+        </div>
+        <div class="when"><span class="d">Sex, 07/08</span><span class="h">19h às 22h</span></div>
+      </div>
+      <div class="night sprint">
+        <div class="idx"><span class="k">Sábado</span><span class="num">CTFL</span></div>
+        <div class="body">
+          <h3>CTFL Sprint · revisão direcionada e simulados</h3>
+          <p>Manhã: revisão dos seis capítulos do syllabus oficial v4.0. Tarde: simulado no formato da prova (40 questões cronometradas), correção comentada, clínica de questões e plano individual de estudo.</p>
+          <div class="deliver">→ Entregável: diagnóstico de prontidão e plano CTFL de 30 dias</div>
+        </div>
+        <div class="when"><span class="d">Sáb, 08/08</span><span class="h">9h–12h · 14h–17h</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CASE FLOWMARKET ===================== -->
+<section class="sec reveal" id="case">
+  <div class="wrap">
+    <div class="case">
+      <div class="term">
+        <div class="bar"><i class="r"></i><i class="y"></i><i class="g"></i><span>flowmarket-ai · playwright</span></div>
+        <div class="body">
+<span class="c1"># cenário gerado e validado pelo aluno</span><br>
+<span class="c3">test</span>(<span class="c4">'checkout aplica cupom inválido'</span>, <span class="c3">async</span> () => {<br>
+&nbsp;&nbsp;<span class="c3">await</span> page.goto(<span class="c4">'/cart'</span>);<br>
+&nbsp;&nbsp;<span class="c3">await</span> page.fill(<span class="c4">'#cupom'</span>, <span class="c4">'EXPIRADO10'</span>);<br>
+&nbsp;&nbsp;<span class="c3">await</span> expect(alert).toHaveText(<span class="c2">'cupom inválido'</span>);<br>
+});<br>
+<span class="c1">› risco mapeado · defeito intencional · evidência ok</span>
+        </div>
+      </div>
+      <div>
+        <span class="tag">Estudo de caso transversal</span>
+        <h2>FlowMarket AI: você aprende numa situação real.</h2>
+        <p>Um e-commerce fictício com cadastro, busca, carrinho, cupons, checkout, frete, área administrativa e atendimento com IA — incluindo requisitos incompletos, riscos e defeitos intencionais.</p>
+        <ul class="clist">
+          <li><span class="mk">→</span> Histórias, regras de negócio, endpoints e logs simplificados.</li>
+          <li><span class="mk">→</span> Você produz artefatos reais a cada noite.</li>
+          <li><span class="mk">→</span> Tudo converge no <strong>capstone</strong> da Noite 5: seu dossiê de qualidade.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== DIFERENCIAIS ===================== -->
+<section class="sec reveal" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Diferenciais</span>
+      <h2>Por que o QA Next é diferente.</h2>
+    </div>
+    <div class="feat-grid">
+      <div class="feat">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M23 7l-7 5 7 5V7zM1 5h15v14H1z"/></svg></div>
+        <h3>Ao vivo, de verdade</h3>
+        <p>Cinco noites com instrutor, demonstrações e laboratórios guiados — não é videoaula gravada.</p>
+      </div>
+      <div class="feat">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M12 2a10 10 0 1 0 10 10M12 6v6l4 2"/></svg></div>
+        <h3>IA transversal</h3>
+        <p>Prompts, dados sintéticos, automação, logs e governança — IA aplicada ao trabalho real de QA.</p>
+      </div>
+      <div class="feat">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M16 18l6-6-6-6M8 6l-6 6 6 6"/></svg></div>
+        <h3>Automação com propósito</h3>
+        <p>Playwright, API, Git e visão de pipeline. Você entende o que automatizar primeiro e executa.</p>
+      </div>
+      <div class="feat">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M8 4v5"/></svg></div>
+        <h3>Case + capstone</h3>
+        <p>O FlowMarket AI integra todas as noites e fecha num projeto final próximo da realidade.</p>
+      </div>
+      <div class="feat">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 1 2.7 3 6 3s6-2 6-3v-5"/></svg></div>
+        <h3>Sábado CTFL Sprint</h3>
+        <p>Revisão do syllabus v4.0, simulado no formato oficial da prova e plano de 30 dias para chegar à certificação com confiança.</p>
+      </div>
+      <div class="feat">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M12 2l8 4v6c0 5-3.4 8.6-8 10-4.6-1.4-8-5-8-10V6z"/><path d="M9 12l2 2 4-4"/></svg></div>
+        <h3>Uso responsável de IA</h3>
+        <p>Privacidade, riscos e governança no centro — IA como copiloto, sempre com validação humana.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== ENTREGÁVEIS ===================== -->
+<section class="sec reveal" style="padding-top:0">
+  <div class="wrap">
+    <div class="deliver-wrap">
+      <div class="sec-head" style="margin-bottom:24px">
+        <span class="eyebrow">O que você leva</span>
+        <h2 style="font-size:32px">Entregáveis aplicáveis no seu trabalho.</h2>
+      </div>
+      <div class="deliver-grid">
+        <div class="ditem"><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4"><path d="M5 12l4 4L19 6"/></svg></span><p>Mapa de riscos de produto e checklist de revisão de requisitos</p></div>
+        <div class="ditem"><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4"><path d="M5 12l4 4L19 6"/></svg></span><p>Critérios de aceite, catálogo de cenários e tabela de decisão</p></div>
+        <div class="ditem"><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4"><path d="M5 12l4 4L19 6"/></svg></span><p>Charter exploratório e modelo de relatório de defeitos</p></div>
+        <div class="ditem"><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4"><path d="M5 12l4 4L19 6"/></svg></span><p>Coleção inicial de testes de API (Postman)</p></div>
+        <div class="ditem"><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4"><path d="M5 12l4 4L19 6"/></svg></span><p>Primeiro teste automatizado adaptado com Playwright</p></div>
+        <div class="ditem"><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4"><path d="M5 12l4 4L19 6"/></svg></span><p>Biblioteca de prompts para QA e checklist de validação de IA</p></div>
+        <div class="ditem"><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4"><path d="M5 12l4 4L19 6"/></svg></span><p>Diagnóstico CTFL e plano de estudo de 30 dias</p></div>
+        <div class="ditem"><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4"><path d="M5 12l4 4L19 6"/></svg></span><p>Certificado de conclusão Impacta + gravações por período definido</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CTFL ===================== -->
+<section class="sec reveal" id="ctfl" style="padding-top:0">
+  <div class="wrap">
+    <div class="ctfl">
+      <div>
+        <span class="eyebrow">Certificação internacional · ISTQB®</span>
+        <h2>O que é a CTFL — e por que ela pesa no seu currículo.</h2>
+        <p class="ctfl-p">A <strong>CTFL (Certified Tester Foundation Level)</strong> é o primeiro nível do <strong>ISTQB®</strong>, o esquema de certificação em teste de software mais reconhecido do mundo. No Brasil, o exame é aplicado pelo <strong>BSTQB</strong>.</p>
+        <p class="ctfl-p">Ela comprova que você domina o vocabulário, o processo e as técnicas fundamentais de teste — a linguagem comum dos times de QA em qualquer abordagem: cascata, ágil ou DevOps.</p>
+        <ul class="ctfl-list">
+          <li><span><b>Porta de entrada da carreira:</b> é pré-requisito para todas as demais certificações ISTQB®, dos níveis Advanced e Expert às trilhas de especialista.</span></li>
+          <li><span><b>Exigida pelo mercado:</b> muitas vagas de QA pedem a CTFL como requisito ou diferencial na contratação.</span></li>
+          <li><span><b>Válida no mundo todo:</b> reconhecimento internacional, sem prazo de validade.</span></li>
+        </ul>
+      </div>
+      <div class="cert-card" aria-hidden="true">
+        <div class="cert-in">
+          <div class="cert-shield"><svg viewBox="0 0 24 24"><path d="M12 2l8 4v6c0 5-3.4 8.6-8 10-4.6-1.4-8-5-8-10V6z"/><path d="M9 12l2 2 4-4"/></svg></div>
+          <div class="cert-t">ISTQB® CTFL <span>v4.0</span></div>
+          <div class="cert-s">Certified Tester Foundation Level</div>
+          <div class="cert-rows">
+            <div class="cert-row"><span>Exame</span><b>40 questões · múltipla escolha</b></div>
+            <div class="cert-row"><span>Aplicação no Brasil</span><b>BSTQB</b></div>
+            <div class="cert-row"><span>Reconhecimento</span><b>internacional</b></div>
+            <div class="cert-row"><span>Abordagens</span><b>cascata · ágil · DevOps</b></div>
+          </div>
+          <p class="cert-foot"><span class="mk">›</span> O sábado CTFL Sprint organiza sua preparação com revisão, simulado e plano de 30 dias — a prova é externa, realizada à parte junto ao órgão certificador.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== PARA QUEM ===================== -->
+<section class="sec reveal" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head cen">
+      <span class="eyebrow">Expectativa honesta</span>
+      <h2>Para quem é — e o que não promete.</h2>
+    </div>
+    <div class="who-grid">
+      <div class="pcard good">
+        <span class="tag">Feito para você se…</span>
+        <ul class="plist">
+          <li><span class="mk">✓</span> Está em início de carreira em tecnologia ou em transição.</li>
+          <li><span class="mk">✓</span> É analista de testes ou QA júnior querendo atualizar práticas.</li>
+          <li><span class="mk">✓</span> É dev, produto, suporte ou análise de negócios interessado em qualidade.</li>
+          <li><span class="mk">✓</span> Lidera squads e precisa entender riscos e uso responsável de IA.</li>
+          <li><span class="mk">✓</span> Quer uma rota prática rumo à certificação CTFL.</li>
+        </ul>
+      </div>
+      <div class="pcard bad">
+        <span class="tag">O que o curso não promete</span>
+        <ul class="plist">
+          <li><span class="mk">✕</span> Aprovação automática na prova CTFL.</li>
+          <li><span class="mk">✕</span> Substituir um treinamento CTFL oficial credenciado.</li>
+          <li><span class="mk">✕</span> Transformar você em especialista em automação em cinco noites.</li>
+          <li><span class="mk">✕</span> Ensinar todas as ferramentas do mercado.</li>
+          <li><span class="mk">✕</span> Incentivar uso de IA sem validação, governança e cuidado com dados.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== EMPRESAS ONDE ALUNOS TRABALHAM ===================== -->
+<section class="logos-band reveal">
+  <div class="wrap">
+    <div class="sec-head cen" style="margin-bottom:42px">
+      <span class="eyebrow">Comunidade Impacta</span>
+      <h2 style="font-size:32px">Nossos alunos estão nas maiores empresas do país.</h2>
+    </div>
+  </div>
+  <div class="marquee">
+    <div class="marquee-track">
+      <img loading="lazy" decoding="async" class="logo-img clr" src="https://commons.wikimedia.org/wiki/Special:FilePath/Banco_Ita%C3%BA_logo.svg?width=400" alt="Itaú">
+      <img loading="lazy" decoding="async" class="logo-img clr" src="https://commons.wikimedia.org/wiki/Special:FilePath/Banco_Bradesco_logo.svg?width=400" alt="Bradesco">
+      <img loading="lazy" decoding="async" class="logo-img clr" src="https://commons.wikimedia.org/wiki/Special:FilePath/Petrobras_horizontal_logo.svg?width=400" alt="Petrobras">
+      <img loading="lazy" decoding="async" class="logo-img clr" src="https://commons.wikimedia.org/wiki/Special:FilePath/Ambev_logo.svg?width=400" alt="Ambev">
+      <img loading="lazy" decoding="async" class="logo-img clr" src="https://commons.wikimedia.org/wiki/Special:FilePath/Magalu_-_novo_logo.png?width=400" alt="Magalu">
+      <img loading="lazy" decoding="async" class="logo-img clr" src="https://commons.wikimedia.org/wiki/Special:FilePath/Porto_2022.svg?width=400" alt="Porto Seguro">
+      <img loading="lazy" decoding="async" class="logo-img" src="https://cdn.simpleicons.org/totvs/white" alt="TOTVS">
+      <img loading="lazy" decoding="async" class="logo-img clr" src="https://commons.wikimedia.org/wiki/Special:FilePath/Banco_Ita%C3%BA_logo.svg?width=400" alt="Itaú">
+      <img loading="lazy" decoding="async" class="logo-img clr" src="https://commons.wikimedia.org/wiki/Special:FilePath/Banco_Bradesco_logo.svg?width=400" alt="Bradesco">
+      <img loading="lazy" decoding="async" class="logo-img clr" src="https://commons.wikimedia.org/wiki/Special:FilePath/Petrobras_horizontal_logo.svg?width=400" alt="Petrobras">
+      <img loading="lazy" decoding="async" class="logo-img clr" src="https://commons.wikimedia.org/wiki/Special:FilePath/Ambev_logo.svg?width=400" alt="Ambev">
+      <img loading="lazy" decoding="async" class="logo-img clr" src="https://commons.wikimedia.org/wiki/Special:FilePath/Magalu_-_novo_logo.png?width=400" alt="Magalu">
+      <img loading="lazy" decoding="async" class="logo-img clr" src="https://commons.wikimedia.org/wiki/Special:FilePath/Porto_2022.svg?width=400" alt="Porto Seguro">
+      <img loading="lazy" decoding="async" class="logo-img" src="https://cdn.simpleicons.org/totvs/white" alt="TOTVS">
+    </div>
+  </div>
+  <div class="marquee rev" style="margin-top:38px">
+    <div class="marquee-track">
+      <img loading="lazy" decoding="async" class="logo-img" src="https://cdn.simpleicons.org/nubank/white" alt="Nubank">
+      <img loading="lazy" decoding="async" class="logo-img" src="https://cdn.simpleicons.org/ifood/white" alt="iFood">
+      <img loading="lazy" decoding="async" class="logo-img" src="https://cdn.simpleicons.org/picpay/white" alt="PicPay">
+      <img loading="lazy" decoding="async" class="logo-img" src="https://cdn.simpleicons.org/vivo/white" alt="Vivo">
+      <img loading="lazy" decoding="async" class="logo-img" src="https://cdn.simpleicons.org/mercadopago/white" alt="Mercado Pago">
+      <img loading="lazy" decoding="async" class="logo-img" src="https://cdn.simpleicons.org/accenture/white" alt="Accenture">
+      <img loading="lazy" decoding="async" class="logo-img" src="https://cdn.simpleicons.org/samsung/white" alt="Samsung">
+      <img loading="lazy" decoding="async" class="logo-img" src="https://cdn.simpleicons.org/sap/white" alt="SAP">
+      <img loading="lazy" decoding="async" class="logo-img" src="https://cdn.simpleicons.org/nubank/white" alt="Nubank">
+      <img loading="lazy" decoding="async" class="logo-img" src="https://cdn.simpleicons.org/ifood/white" alt="iFood">
+      <img loading="lazy" decoding="async" class="logo-img" src="https://cdn.simpleicons.org/picpay/white" alt="PicPay">
+      <img loading="lazy" decoding="async" class="logo-img" src="https://cdn.simpleicons.org/vivo/white" alt="Vivo">
+      <img loading="lazy" decoding="async" class="logo-img" src="https://cdn.simpleicons.org/mercadopago/white" alt="Mercado Pago">
+      <img loading="lazy" decoding="async" class="logo-img" src="https://cdn.simpleicons.org/accenture/white" alt="Accenture">
+      <img loading="lazy" decoding="async" class="logo-img" src="https://cdn.simpleicons.org/samsung/white" alt="Samsung">
+      <img loading="lazy" decoding="async" class="logo-img" src="https://cdn.simpleicons.org/sap/white" alt="SAP">
+    </div>
+  </div>
+  <p class="logos-note">Empresas onde profissionais formados pela Impacta atuam · logos ilustrativos</p>
+</section>
+
+<!-- ===================== PARCEIROS EDUCACIONAIS ===================== -->
+<section class="sec reveal" style="padding-top:30px">
+  <div class="wrap">
+    <div class="sec-head cen" style="margin-bottom:38px">
+      <span class="eyebrow">Parceiros educacionais</span>
+      <h2 style="font-size:32px">Conteúdo conectado às grandes plataformas de tecnologia.</h2>
+    </div>
+    <div class="partners-grid">
+      <div class="partner"><img loading="lazy" decoding="async" src="https://commons.wikimedia.org/wiki/Special:FilePath/Microsoft_logo_(2012).svg?width=400" alt="Microsoft" class="clr"><span class="p-name">Microsoft</span></div>
+      <div class="partner"><img loading="lazy" decoding="async" src="https://commons.wikimedia.org/wiki/Special:FilePath/Oracle_logo.svg?width=400" alt="Oracle" class="clr"><span class="p-name">Oracle</span></div>
+      <div class="partner"><img loading="lazy" decoding="async" src="https://commons.wikimedia.org/wiki/Special:FilePath/Amazon_logo.svg?width=400" alt="Amazon" class="clr"><span class="p-name">Amazon</span></div>
+      <div class="partner"><img loading="lazy" decoding="async" src="https://cdn.simpleicons.org/google/white" alt="Google"><span class="p-name">Google</span></div>
+      <div class="partner"><img loading="lazy" decoding="async" src="https://cdn.simpleicons.org/redhat/white" alt="Red Hat"><span class="p-name">Red Hat</span></div>
+      <div class="partner"><img loading="lazy" decoding="async" src="https://cdn.simpleicons.org/cisco/white" alt="Cisco"><span class="p-name">Cisco</span></div>
+      <div class="partner"><img loading="lazy" decoding="async" src="https://cdn.simpleicons.org/fortinet/white" alt="Fortinet"><span class="p-name">Fortinet</span></div>
+      <div class="partner"><img loading="lazy" decoding="async" src="https://cdn.simpleicons.org/huawei/white" alt="Huawei"><span class="p-name">Huawei</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== INVESTIMENTO / LOTES ===================== -->
+<section class="sec invest reveal" id="investimento">
+  <div class="wrap">
+    <div class="sec-head cen">
+      <span class="eyebrow">Investimento · lotes reais</span>
+      <h2>Quem chega antes, paga menos.</h2>
+      <p>Os lotes avançam por data, do pioneiro até o início da turma. Cada um encerra ao atingir o limite de vagas ou na data final — o que vier primeiro.</p>
+    </div>
+
+    <!-- TIMELINE / RÉGUA -->
+    <div class="timeline">
+      <div class="tl-head">
+        <span class="t">Linha do tempo dos lotes</span>
+        <span class="n">20 jun → 03 ago 2026</span>
+      </div>
+      <div class="tl-track">
+        <div class="tl-fill"></div>
+        <div class="tl-node on" style="left:2%"><span class="lab">20 jun</span></div>
+        <div class="tl-node" style="left:35%"><span class="lab">05 jul</span></div>
+        <div class="tl-node" style="left:68%"><span class="lab">20 jul</span></div>
+        <div class="tl-node course" style="left:99%"><span class="flag">▶ Curso · 03 ago</span></div>
+      </div>
+      <div class="tl-seglab">
+        <div class="s act"><b>Lote Pioneiro</b><span>20/06 – 04/07</span></div>
+        <div class="s"><b>Lote Regular</b><span>05/07 – 19/07</span></div>
+        <div class="s"><b>Reta Final</b><span>20/07 – 02/08</span></div>
+      </div>
+    </div>
+
+    <div class="lotes">
+      <div class="lote active">
+        <span class="badge">Lote atual</span>
+        <span class="ln">Lote pioneiro</span>
+        <div class="price">R$ 697</div>
+        <div class="per">menor preço · primeiras vagas da turma</div>
+        <div class="meta">
+          <div><span>Período</span><b>20/06 – 04/07</b></div>
+          <div><span>Vagas</span><b>limitadas</b></div>
+        </div>
+        <a href="https://impacta.site.engaged.com.br/p/checkout/tm8cdtdrbf" data-cta="checkout" class="btn btn-primary lcta">Garantir lote pioneiro</a>
+      </div>
+      <div class="lote">
+        <span class="ln">Lote regular</span>
+        <div class="price">R$ 897</div>
+        <div class="per">principal janela comercial</div>
+        <div class="meta">
+          <div><span>Período</span><b>05/07 – 19/07</b></div>
+          <div><span>Vagas</span><b>limitadas</b></div>
+        </div>
+        <a href="https://impacta.site.engaged.com.br/p/checkout/tm8cdtdrbf" data-cta="checkout" class="btn btn-ghost lcta">Quero este lote</a>
+      </div>
+      <div class="lote">
+        <span class="ln">Reta final</span>
+        <div class="price">R$ 997</div>
+        <div class="per">última janela antes do início</div>
+        <div class="meta">
+          <div><span>Período</span><b>20/07 – 02/08</b></div>
+          <div><span>Vagas</span><b>últimas</b></div>
+        </div>
+        <a href="https://impacta.site.engaged.com.br/p/checkout/tm8cdtdrbf" data-cta="checkout" class="btn btn-ghost lcta">Quero este lote</a>
+      </div>
+    </div>
+
+    <div class="included">
+      <h4>Incluso em todos os lotes</h4>
+      <div class="inc-grid">
+        <div class="inc"><span class="mk">✓</span> 21 horas ao vivo (5 noites + sábado)</div>
+        <div class="inc"><span class="mk">✓</span> Workbook digital e templates</div>
+        <div class="inc"><span class="mk">✓</span> Case FlowMarket AI + capstone</div>
+        <div class="inc"><span class="mk">✓</span> Coleção Postman e repositório Playwright</div>
+        <div class="inc"><span class="mk">✓</span> Biblioteca inicial de prompts</div>
+        <div class="inc"><span class="mk">✓</span> Sábado CTFL Sprint + simulado</div>
+        <div class="inc"><span class="mk">✓</span> Plano CTFL de 30 dias</div>
+        <div class="inc"><span class="mk">✓</span> Certificado Impacta + gravações</div>
+      </div>
+      <p style="margin-top:20px;font-size:14px;color:var(--ink-3);font-family:var(--mono)">Parcelamento disponível no checkout. Inscrições encerram em 02/08 às 18h.</p>
+    </div>
+
+    <div class="center" style="margin-top:36px">
+      <a href="https://impacta.site.engaged.com.br/p/checkout/tm8cdtdrbf" data-cta="checkout" class="btn btn-primary btn-lg">Garantir minha vaga no lote pioneiro
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FAQ ===================== -->
+<section class="sec reveal" id="faq">
+  <div class="wrap">
+    <div class="sec-head cen">
+      <span class="eyebrow">Perguntas frequentes</span>
+      <h2>Tudo o que você precisa saber.</h2>
+    </div>
+    <div class="faq">
+      <details>
+        <summary>Preciso saber programar? <span class="pm">+</span></summary>
+        <div class="ans">Não. O curso é acessível a iniciantes, com laboratórios guiados. Familiaridade básica com tecnologia ajuda, mas a automação é introduzida de forma orientada — você não precisa dominar programação para acompanhar.</div>
+      </details>
+      <details>
+        <summary>O curso garante aprovação na prova CTFL? <span class="pm">+</span></summary>
+        <div class="ans">Não. O sábado CTFL Sprint orienta a preparação, mede sua prontidão com simulados e ajuda a definir um plano de estudo. Não existe promessa de aprovação automática, e o curso não substitui um treinamento CTFL oficial credenciado.</div>
+      </details>
+      <details>
+        <summary>Qual a diferença entre o certificado do curso e a certificação CTFL? <span class="pm">+</span></summary>
+        <div class="ans">Você recebe o <strong>certificado de conclusão da Impacta</strong> ao cumprir presença e entregas. A certificação <strong>ISTQB® CTFL 4.0.1</strong> é uma prova externa, realizada e paga separadamente pelo aluno junto ao órgão certificador — o sábado te prepara para essa jornada.</div>
+      </details>
+      <details>
+        <summary>As aulas ficam gravadas? <span class="pm">+</span></summary>
+        <div class="ans">Sim. As aulas são ao vivo e ficam disponíveis em gravação pelo período definido pela instituição, junto com workbook, templates e materiais de apoio.</div>
+      </details>
+      <details>
+        <summary>Quais ferramentas vou usar? <span class="pm">+</span></summary>
+        <div class="ans">Postman, Playwright, GitHub, GitHub Actions e uma ferramenta de IA generativa autorizada. Você precisará de notebook com internet, conta no GitHub, VS Code e Node.js instalados (há tutorial de preparação).</div>
+      </details>
+      <details>
+        <summary>É ao vivo ou gravado? Qual o horário? <span class="pm">+</span></summary>
+        <div class="ans">100% online ao vivo. As cinco noites acontecem de 3 a 7 de agosto de 2026, das 19h às 22h. O sábado CTFL Sprint é em 08/08, das 9h às 12h e das 14h às 17h.</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FINAL CTA ===================== -->
+<section class="final reveal">
+  <div class="glow"></div>
+  <div class="wrap">
+    <div class="qa qa--lg" style="justify-content:center">
+      <span class="qa__mk"><svg viewBox="0 0 32 32"><path d="M8 17l5 5 11-13"/></svg></span>
+      <span class="qa__tx"><b>QA</b><em>Next</em></span>
+    </div>
+    <h2>Comece a construir qualidade<br>com método e IA.</h2>
+    <p>Cinco noites ao vivo, um sábado intensivo e entregáveis que você usa no trabalho na segunda-feira seguinte.</p>
+    <div class="hero-cta">
+      <a href="#investimento" class="btn btn-primary btn-lg">Garantir minha vaga</a>
+      <a href="#programa" class="btn btn-ghost btn-lg">Rever a grade</a>
+    </div>
+    <p class="hero-note">Lote pioneiro · <b>R$ 697</b> · abertura em 20/06 · enquanto houver vagas</p>
+  </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-top">
+      <div>
+        <img class="colock" src="assets/impacta-olhar-lockup.webp" alt="Impacta × Olhar Digital" style="height:38px;width:auto">
+        <p class="muted" style="margin-top:16px;max-width:340px;font-size:14px">QA Next · Qualidade, Automação e IA para Software Confiável. Uma imersão Impacta em parceria com o Olhar Digital.</p>
+      </div>
+      <div class="cols">
+        <div class="col">
+          <h5>Curso</h5>
+          <a href="#programa">Programa</a>
+          <a href="#case">Case FlowMarket AI</a>
+          <a href="#datas">Datas e horários</a>
+          <a href="#investimento">Investimento</a>
+        </div>
+        <div class="col">
+          <h5>Ajuda</h5>
+          <a href="#faq">Perguntas frequentes</a>
+          <a href="https://api.whatsapp.com/send?phone=551132548300" data-cta="whatsapp" target="_blank" rel="noopener">Falar com a equipe</a>
+        </div>
+      </div>
+    </div>
+    <div class="foot-legal">
+      <span>© 2026 Impacta Tecnologia · Olhar Digital · Todos os direitos reservados</span>
+      <span>ISTQB® e CTFL são marcas de seus respectivos detentores · certificação realizada separadamente</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ===================== WHATSAPP FLUTUANTE ===================== -->
+<a class="fab fab--wa" href="https://api.whatsapp.com/send?phone=551132548300" data-cta="whatsapp" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 0 1 8.413 3.488 11.824 11.824 0 0 1 3.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 0 0 1.595 5.39l-.999 3.648 3.893-1.737zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.71.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"></path></svg>
+  <span class="fab__label">WhatsApp</span>
+</a>
+
+<!-- ===================== STICKY MOBILE CTA ===================== -->
+<div class="sticky-cta">
+  <div class="p">R$ 697 <small>Lote pioneiro · vagas limitadas</small></div>
+  <a href="#investimento" class="btn btn-primary">Garantir vaga</a>
+</div>
+
+<script>
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, {threshold:.12});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+<script src="app.js"></script>
+</body>
+</html>

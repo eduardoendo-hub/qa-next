@@ -5,18 +5,24 @@
  *   1. Captura utm_* da URL (e os persiste por sessão).
  *   2. Repassa os UTMs para TODOS os links de saída (checkout Engaged + WhatsApp),
  *      preservando os params que o anúncio mandou pra esta página.
- *   3. Pixel Meta — placeholder no-op até META_PIXEL_ID ser preenchido.
+ *   3. Empurra eventos pra IRIS (cockpit em tempo real): lp_view, click_compra,
+ *      click_whats — POST /api/events (mesma convenção das LPs irmãs).
+ *   4. Pixel Meta — placeholder no-op até META_PIXEL_ID ser preenchido.
  *
  *  Sem barreira de captura de dados: WhatsApp e checkout vão direto.
+ *  (Sem integração com integracao-rd por enquanto — não há form de lead.)
  *  ──────────────────────────────────────────────────────────────────────────── */
 (function () {
   'use strict';
 
   var CFG = {
+    PRODUCT_SLUG:    'qa-next',
+    CAMPAIGN_SLUG:   'qa-next-agosto-2026',
+    IRIS_EVENTS_URL: 'https://iris.technowhub.ai/api/events',
+    TICKET_VALUE:    697,            // lote vigente (pioneiro) — referência p/ value
+    CURRENCY:        'BRL',
     // Preencher quando o Pixel entrar (deixe vazio = no-op):
-    META_PIXEL_ID: '',
-    // Campanha/turma vigente — usada em eventos e atribuição IRIS:
-    CAMPAIGN_SLUG: 'qa-next-agosto-2026',
+    META_PIXEL_ID:   '',
   };
 
   var UTM_KEYS = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term'];
@@ -48,7 +54,36 @@
     return url.toString();
   }
 
-  // ─── 3. Aplica nos links de saída (checkout + whatsapp) ───────────────────
+  // ─── 3. Evento pra IRIS (cockpit em tempo real) ───────────────────────────
+  function sendIrisEvent(eventName, extra) {
+    try {
+      var p = getTrackingParams();
+      var body = {
+        product_slug:  CFG.PRODUCT_SLUG,
+        event_name:    eventName,
+        campaign_slug: CFG.CAMPAIGN_SLUG,
+        page_url:      location.href,
+        utm_source:    p.utm_source   || null,
+        utm_medium:    p.utm_medium   || null,
+        utm_campaign:  p.utm_campaign || null,
+        utm_content:   p.utm_content  || null,
+        utm_term:      p.utm_term     || null,
+        referrer:      document.referrer || null
+      };
+      if (extra && extra.value != null) body.value = extra.value;
+      if (extra && extra.currency)      body.currency = extra.currency;
+      if (extra)                        body.meta = extra;
+      fetch(CFG.IRIS_EVENTS_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(body),
+        keepalive: true,
+        mode: 'cors'
+      }).catch(function () {});
+    } catch (e) {}
+  }
+
+  // ─── 4. Aplica nos links de saída (checkout + whatsapp) ───────────────────
   function decorateOutboundLinks(params) {
     document.querySelectorAll('a[data-cta]').forEach(function (el) {
       if (el.dataset.utmApplied) return;
@@ -57,14 +92,20 @@
       if (href.indexOf('http') !== 0) return;
       el.setAttribute('href', withTracking(href, params));
       el.dataset.utmApplied = '1';
+      var cta = el.getAttribute('data-cta');
       el.addEventListener('click', function () {
-        track(el.getAttribute('data-cta') === 'checkout' ? 'InitiateCheckout' : 'Contact',
-              { placement: el.getAttribute('data-cta') });
+        if (cta === 'checkout') {
+          sendIrisEvent('click_compra', { value: CFG.TICKET_VALUE, currency: CFG.CURRENCY });
+          track('InitiateCheckout', { value: CFG.TICKET_VALUE, currency: CFG.CURRENCY, placement: cta });
+        } else if (cta === 'whatsapp') {
+          sendIrisEvent('click_whats', { channel: 'whatsapp' });
+          track('Contact', { placement: cta });
+        }
       });
     });
   }
 
-  // ─── 4. Pixel Meta (no-op até ter ID) ─────────────────────────────────────
+  // ─── 5. Pixel Meta (no-op até ter ID) ─────────────────────────────────────
   function initPixel() {
     if (!CFG.META_PIXEL_ID || window.fbq) return;
     !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -82,7 +123,7 @@
     if (window.dataLayer) { window.dataLayer.push(Object.assign({ event: eventName }, params)); }
   }
 
-  // ─── 5. Run + observa mudanças no DOM ─────────────────────────────────────
+  // ─── 6. Run + observa mudanças no DOM ─────────────────────────────────────
   function apply() {
     var params = getTrackingParams();
     decorateOutboundLinks(params);
@@ -91,4 +132,7 @@
   initPixel();
   apply();
   new MutationObserver(apply).observe(document.body, { childList: true, subtree: true });
+
+  // lp_view — uma vez por carregamento
+  sendIrisEvent('lp_view');
 })();

@@ -372,6 +372,7 @@ section{position:relative}
 @keyframes scroll{to{transform:translateX(-50%)}}
 .logo-img{height:30px;width:auto;opacity:.62;transition:.25s;flex-shrink:0}
 .logo-img.clr{height:34px;filter:brightness(0) invert(1);opacity:.68}
+.logo-img.lw{height:34px;opacity:.68}
 .logo-img:hover{opacity:1}
 .partners-row{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:40px 60px;margin-top:8px;padding:8px 0}
 .plogo{height:32px;width:auto;opacity:.6;transition:opacity .25s,filter .25s;flex-shrink:0}

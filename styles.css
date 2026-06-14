@@ -373,14 +373,10 @@ section{position:relative}
 .logo-img{height:30px;width:auto;opacity:.62;transition:.25s;flex-shrink:0}
 .logo-img.clr{height:34px;filter:brightness(0) invert(1);opacity:.68}
 .logo-img:hover{opacity:1}
-.partners-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:8px}
-.partner{height:108px;background:var(--panel);border:1px solid var(--line);border-radius:14px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;padding:0 18px;transition:.2s}
-.partner img{height:30px;width:auto;opacity:.7;transition:.2s}
-.partner img.clr{filter:brightness(0) invert(1)}
-.p-name{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-3);transition:.2s}
-.partner:hover .p-name{color:var(--ink-2)}
-.partner:hover{border-color:#2c3a5e}
-.partner:hover img{opacity:1}
+.partners-row{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:40px 60px;margin-top:8px;padding:8px 0}
+.plogo{height:32px;width:auto;opacity:.6;transition:opacity .25s,filter .25s;flex-shrink:0}
+.plogo.clr{filter:brightness(0) invert(1)}
+.plogo:hover{opacity:1}
 .logos-note{text-align:center;font-size:13px;color:var(--ink-3);margin-top:30px;font-family:var(--mono)}
 
 /* ---------- instrutor ---------- */
@@ -488,7 +484,8 @@ section{position:relative}
   .qa--lg .qa__tx{font-size:46px}.qa--lg .qa__mk{width:54px;height:54px}
   .relev-grid,.relev-pts,.out-grid,.feat-grid{grid-template-columns:repeat(2,1fr)}
   .lotes{grid-template-columns:1fr}
-  .partners-grid{grid-template-columns:repeat(2,1fr)}
+  .partners-row{gap:32px 44px}
+  .plogo{height:28px}
   .split,.case,.who-grid,.instr,.deliver-grid{grid-template-columns:1fr}
   .instr{text-align:center}.instr .ph{max-width:220px;margin:0 auto}
   .case{padding:34px}
@@ -502,7 +499,7 @@ section{position:relative}
   .hero h1{font-size:33px}
   .qa--lg .qa__tx{font-size:38px}.qa--lg .qa__mk{width:46px;height:46px}
   .sec{padding:64px 0}.sec-head h2{font-size:30px}
-  .relev-grid,.out-grid,.feat-grid,.partners-grid{grid-template-columns:1fr}
+  .relev-grid,.out-grid,.feat-grid{grid-template-columns:1fr}
   .night{grid-template-columns:1fr;gap:14px}
   .night .when{text-align:left}
   .final h2{font-size:32px}

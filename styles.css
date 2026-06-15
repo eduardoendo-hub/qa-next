@@ -256,6 +256,14 @@ section{position:relative}
 .rpt p{font-size:15px;color:#dbe7ff;line-height:1.45}
 .rpt p b{color:#fff}
 
+/* ---------- variante Olhar Digital (verde) ---------- */
+.relev--olhar{background:linear-gradient(155deg,#0B5A2A,#03250F);border-color:rgba(76,230,124,.22)}
+.relev--olhar .glow{background:#1fae57;opacity:.34}
+.relev--olhar .relev-head .eyebrow{color:#9ff0bd}
+.relev--olhar .stat .v{color:#0E6B2E}
+.relev--olhar .relev-logo{height:34px}
+.relev--olhar .rpt p{color:#cdeedb}
+
 /* ---------- cards: problema / transformação ---------- */
 .split{display:grid;grid-template-columns:1fr 1fr;gap:30px}
 .pcard{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:34px}

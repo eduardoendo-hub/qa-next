@@ -136,3 +136,45 @@
   // lp_view — uma vez por carregamento
   sendIrisEvent('lp_view');
 })();
+
+/* ──────────────────────────────────────────────────────────────────────────────
+ *  Bloco Impacta (portado da LP MySQL): vídeo Av. Paulista + contador "em números"
+ *  ──────────────────────────────────────────────────────────────────────────── */
+(function () {
+  'use strict';
+  // Vídeo Paulista — toca ao entrar na tela + máscara final com logo Impacta
+  var pv = document.getElementById('paulistaVideo');
+  if (pv) {
+    var ec = document.querySelector('.auth-endcard');
+    var started = false;
+    var vObs = new IntersectionObserver(function (es) {
+      es.forEach(function (e) {
+        if (e.isIntersecting && !started) { started = true; var p = pv.play(); if (p && p.catch) p.catch(function () {}); }
+      });
+    }, { threshold: .25 });
+    vObs.observe(pv);
+    pv.addEventListener('timeupdate', function () {
+      var d = pv.duration || 0;
+      if (ec) { if (d && pv.currentTime >= d - 3.4) ec.classList.add('show'); else ec.classList.remove('show'); }
+    });
+  }
+  // Contador "Impacta em números"
+  var bstats = document.querySelectorAll('.bigstat');
+  if (bstats.length) {
+    var fmt = function (val, dec) { var s = dec ? val.toFixed(dec) : Math.round(val).toString(); return s.replace('.', ','); };
+    var run = function (el) {
+      var t = parseFloat(el.dataset.target || '0'), dec = parseInt(el.dataset.decimals || '0', 10);
+      var num = el.querySelector('.num'); var dur = 1400; var t0 = performance.now();
+      var tick = function (now) {
+        var p = Math.min(1, (now - t0) / dur); var e = 1 - Math.pow(1 - p, 3);
+        num.textContent = fmt(t * e, dec);
+        if (p < 1) requestAnimationFrame(tick); else num.textContent = fmt(t, dec);
+      };
+      requestAnimationFrame(tick);
+    };
+    var nObs = new IntersectionObserver(function (es) {
+      es.forEach(function (e) { if (e.isIntersecting) { run(e.target); nObs.unobserve(e.target); } });
+    }, { threshold: .4 });
+    bstats.forEach(function (el) { nObs.observe(el); });
+  }
+})();

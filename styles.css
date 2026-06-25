@@ -568,7 +568,7 @@ section{position:relative}
 .award-card p b{color:#fff;font-weight:600}
 .num-band{position:relative;overflow:hidden;padding:96px 0;background:linear-gradient(160deg,#08111f,#050709 60%);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
 .num-aura{position:absolute;inset:0;z-index:0;pointer-events:none;background:radial-gradient(800px 360px at 50% -10%,rgba(10,136,244,.22),transparent 62%),radial-gradient(600px 300px at 88% 120%,rgba(84,174,255,.10),transparent 60%)}
-.num-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:16px;margin-top:8px}
+.num-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:8px}
 .num-band .bigstat{position:relative;padding:34px 22px 28px;text-align:center;border-radius:18px;background:linear-gradient(180deg,rgba(255,255,255,.045),rgba(255,255,255,.012));border:1px solid var(--line-2);overflow:hidden;box-shadow:inset 0 1px 0 rgba(255,255,255,.08),0 24px 44px -28px rgba(0,0,0,.8);transition:transform .22s,border-color .22s,box-shadow .22s}
 .num-band .bigstat::before{content:"";position:absolute;top:0;left:24px;right:24px;height:2px;background:linear-gradient(90deg,transparent,var(--blue),var(--blue-2),transparent);opacity:.7}
 .num-band .bigstat:hover{transform:translateY(-6px);border-color:rgba(84,174,255,.45);box-shadow:inset 0 1px 0 rgba(255,255,255,.12),0 34px 60px -26px rgba(0,0,0,.9),0 0 50px -24px rgba(10,136,244,.7)}

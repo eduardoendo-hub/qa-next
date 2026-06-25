@@ -331,6 +331,40 @@
   </div>
 </section>
 
+<!-- ===================== CASE HUB DE LEITURA ===================== -->
+<section class="sec reveal" id="case">
+  <div class="wrap">
+    <div class="case">
+      <div class="term">
+        <div class="bar"><i class="r"></i><i class="y"></i><i class="g"></i><span>hub-de-leitura · playwright</span></div>
+        <div class="body">
+<span class="c1"># cenário gerado e validado pelo aluno</span><br>
+<span class="c3">test</span>(<span class="c4">'devolução aplica multa para livro em atraso'</span>, <span class="c3">async</span> () => {<br>
+&nbsp;&nbsp;<span class="c3">await</span> page.goto(<span class="c4">'/devolucao'</span>);<br>
+&nbsp;&nbsp;<span class="c3">await</span> page.fill(<span class="c4">'#codigo-emprestimo'</span>, <span class="c4">'EMP-VENCIDO'</span>);<br>
+&nbsp;&nbsp;<span class="c3">await</span> expect(page.locator(<span class="c4">'#aviso-multa'</span>)).toBeVisible();<br>
+});<br>
+<span class="c1">› risco mapeado · defeito intencional · evidência ok</span>
+        </div>
+      </div>
+      <div>
+        <span class="tag">Estudo de caso transversal</span>
+        <h2>Hub de Leitura: você aprende num sistema real.</h2>
+        <p>Um sistema de biblioteca real com cadastro, autenticação, busca, empréstimos, devoluções, área administrativa e atendimento com IA — incluindo requisitos incompletos, riscos e defeitos intencionais.</p>
+        <ul class="clist">
+          <li><span class="mk">→</span> Histórias, regras de negócio, endpoints e logs reais disponíveis no repositório.</li>
+          <li><span class="mk">→</span> Você produz artefatos concretos a cada noite.</li>
+          <li><span class="mk">→</span> Tudo converge no <strong>capstone</strong> da Noite 05: seu dossiê de qualidade.</li>
+        </ul>
+        <a class="case-repo" href="https://github.com/fabioaraujoqa/hub-de-leitura" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.5 0-.3 0-1 0-1.8-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.4-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17 4.6 18 4.9 18 4.9c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.3.8 1.1.8 2.2 0 1.6 0 2.9 0 3.3 0 .3.2.6.8.5 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.7 18.3.5 12 .5z"/></svg>
+          Repositório público do projeto · github.com/fabioaraujoqa/hub-de-leitura
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ===================== PROGRAMA ===================== -->
 <section class="sec invest reveal" id="programa">
   <div class="wrap">
@@ -380,7 +414,7 @@
         <div class="idx"><span class="k">Noite 5</span><span class="num">05</span></div>
         <div class="body">
           <h3>AI-Enabled Quality Operating Model</h3>
-          <p>Agentes, RAG, governança, roadmap de adoção e o desafio integrado (capstone).</p>
+          <p>Agentes, MCP (Model Context Protocol), RAG, Playwright com IA, governança, roadmap de adoção e o desafio integrado (capstone).</p>
           <div class="deliver">→ Entregável: dossiê final e plano de adoção</div>
         </div>
         <div class="when"><span class="d">Sex, 07/08</span><span class="h">19h às 22h</span></div>
@@ -393,36 +427,6 @@
           <div class="deliver">→ Entregável: diagnóstico de prontidão e plano CTFL de 30 dias</div>
         </div>
         <div class="when"><span class="d">Sáb, 08/08</span><span class="h">9h–12h · 14h–17h</span></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===================== CASE FLOWMARKET ===================== -->
-<section class="sec reveal" id="case">
-  <div class="wrap">
-    <div class="case">
-      <div class="term">
-        <div class="bar"><i class="r"></i><i class="y"></i><i class="g"></i><span>flowmarket-ai · playwright</span></div>
-        <div class="body">
-<span class="c1"># cenário gerado e validado pelo aluno</span><br>
-<span class="c3">test</span>(<span class="c4">'checkout aplica cupom inválido'</span>, <span class="c3">async</span> () => {<br>
-&nbsp;&nbsp;<span class="c3">await</span> page.goto(<span class="c4">'/cart'</span>);<br>
-&nbsp;&nbsp;<span class="c3">await</span> page.fill(<span class="c4">'#cupom'</span>, <span class="c4">'EXPIRADO10'</span>);<br>
-&nbsp;&nbsp;<span class="c3">await</span> expect(alert).toHaveText(<span class="c2">'cupom inválido'</span>);<br>
-});<br>
-<span class="c1">› risco mapeado · defeito intencional · evidência ok</span>
-        </div>
-      </div>
-      <div>
-        <span class="tag">Estudo de caso transversal</span>
-        <h2>FlowMarket AI: você aprende numa situação real.</h2>
-        <p>Um e-commerce fictício com cadastro, busca, carrinho, cupons, checkout, frete, área administrativa e atendimento com IA — incluindo requisitos incompletos, riscos e defeitos intencionais.</p>
-        <ul class="clist">
-          <li><span class="mk">→</span> Histórias, regras de negócio, endpoints e logs simplificados.</li>
-          <li><span class="mk">→</span> Você produz artefatos reais a cada noite.</li>
-          <li><span class="mk">→</span> Tudo converge no <strong>capstone</strong> da Noite 5: seu dossiê de qualidade.</li>
-        </ul>
       </div>
     </div>
   </div>
@@ -454,7 +458,7 @@
       <div class="feat">
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M8 4v5"/></svg></div>
         <h3>Case + capstone</h3>
-        <p>O FlowMarket AI integra todas as noites e fecha num projeto final próximo da realidade.</p>
+        <p>O Hub de Leitura integra todas as noites e fecha num projeto final com sistema real e repositório público.</p>
       </div>
       <div class="feat">
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 1 2.7 3 6 3s6-2 6-3v-5"/></svg></div>
@@ -691,7 +695,7 @@
       <div class="inc-grid">
         <div class="inc"><span class="mk">✓</span> 21 horas ao vivo (5 noites + sábado)</div>
         <div class="inc"><span class="mk">✓</span> Workbook digital e templates</div>
-        <div class="inc"><span class="mk">✓</span> Case FlowMarket AI + capstone</div>
+        <div class="inc"><span class="mk">✓</span> Case Hub de Leitura + capstone</div>
         <div class="inc"><span class="mk">✓</span> Coleção Postman e repositório Playwright</div>
         <div class="inc"><span class="mk">✓</span> Biblioteca inicial de prompts</div>
         <div class="inc"><span class="mk">✓</span> Sábado CTFL Sprint + simulado</div>
@@ -774,7 +778,7 @@
         <div class="col">
           <h5>Curso</h5>
           <a href="#programa">Programa</a>
-          <a href="#case">Case FlowMarket AI</a>
+          <a href="#case">Case Hub de Leitura</a>
           <a href="#datas">Datas e horários</a>
           <a href="#investimento">Investimento</a>
         </div>

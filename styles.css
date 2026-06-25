@@ -324,6 +324,9 @@ section{position:relative}
 .case .clist{list-style:none;margin-top:20px;display:flex;flex-direction:column;gap:11px}
 .case .clist li{display:flex;gap:11px;font-size:15px;color:var(--ink)}
 .case .clist .mk{color:var(--blue-3);font-family:var(--mono)}
+.case-repo{display:inline-flex;align-items:center;gap:9px;margin-top:24px;padding:10px 14px;border:1px solid var(--line);border-radius:10px;background:rgba(255,255,255,.03);color:var(--ink-2);font-family:var(--mono);font-size:12.5px;text-decoration:none;transition:.2s}
+.case-repo svg{width:17px;height:17px;flex-shrink:0;color:var(--blue-3)}
+.case-repo:hover{border-color:#2c3a5e;color:var(--ink);background:rgba(255,255,255,.06)}
 
 /* ---------- diferenciais ---------- */
 .feat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}

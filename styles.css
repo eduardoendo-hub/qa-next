@@ -579,3 +579,28 @@ section{position:relative}
 @media(max-width:860px){.auth-grid{grid-template-columns:1fr;gap:30px}}
 @media(max-width:1080px){.num-grid{grid-template-columns:repeat(3,1fr)}}
 @media(max-width:680px){.num-grid{grid-template-columns:repeat(2,1fr)}}
+
+/* ===================== POLIMENTO · profundidade estilo LP MySQL ===================== */
+/* Botões 3D — gradiente vertical + highlight interno + anel + glow + drop shadow */
+.btn{transition:transform .16s cubic-bezier(.2,.7,.2,1),box-shadow .18s,filter .18s,background .16s,border-color .16s}
+.btn:active{transform:translateY(-1px)}
+.btn-primary{background:linear-gradient(180deg,#2A9BFF,#0A6FD0);color:#fff;
+  box-shadow:0 1px 0 rgba(255,255,255,.40) inset,0 0 0 1px rgba(10,111,208,.55),0 14px 26px -10px rgba(10,136,244,.80),0 4px 8px -3px rgba(0,0,0,.50)}
+.btn-primary:hover{transform:translateY(-3px);filter:brightness(1.07);
+  box-shadow:0 1px 0 rgba(255,255,255,.50) inset,0 0 0 1px rgba(58,160,255,.60),0 22px 38px -10px rgba(10,136,244,.95),0 6px 12px -4px rgba(0,0,0,.50)}
+.btn-ghost{background:linear-gradient(180deg,rgba(42,54,74,.85),rgba(18,26,40,.92));color:var(--ink);border-color:rgba(255,255,255,.16);backdrop-filter:blur(6px);
+  box-shadow:0 1px 0 rgba(255,255,255,.18) inset,0 12px 24px -12px rgba(0,0,0,.70)}
+.btn-ghost:hover{transform:translateY(-3px);border-color:rgba(58,160,255,.5);filter:brightness(1.10);background:linear-gradient(180deg,rgba(42,54,74,.85),rgba(18,26,40,.92));
+  box-shadow:0 1px 0 rgba(255,255,255,.22) inset,0 16px 30px -12px rgba(0,0,0,.78)}
+
+/* Cards com profundidade (highlight interno sutil + sombra projetada) */
+.pcard,.night,.feat,.lote,.award-card{box-shadow:0 1px 0 rgba(255,255,255,.05) inset,0 24px 44px -28px rgba(0,0,0,.80)}
+.feat:hover,.night:hover,.lote:hover{box-shadow:0 1px 0 rgba(255,255,255,.08) inset,0 34px 60px -26px rgba(0,0,0,.90)}
+/* cards de estatística (brancos) — elevação suave */
+.stat{box-shadow:0 1px 0 rgba(255,255,255,.6) inset,0 26px 46px -26px rgba(0,0,0,.55)}
+
+/* Seção "Por que a Impacta" (vídeo) com fundo preto, como na LP MySQL */
+#impacta{background:linear-gradient(180deg,#06080d,#04060a);border-top:1px solid var(--line)}
+
+/* Olhar Digital — logo um pouco maior (mais elegante) */
+.relev--olhar .relev-logo{height:46px}

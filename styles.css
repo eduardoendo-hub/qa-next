@@ -604,3 +604,23 @@ section{position:relative}
 
 /* Olhar Digital — logo um pouco maior (mais elegante) */
 .relev--olhar .relev-logo{height:46px}
+
+/* ===================== SELO ISTQB® CTFL no hero ===================== */
+.cert-badge{display:inline-flex;align-items:center;gap:14px;margin-top:22px;padding:13px 18px;border-radius:16px;max-width:560px;text-decoration:none;
+  background:linear-gradient(180deg,rgba(245,166,35,.11),rgba(13,19,32,.55));
+  border:1px solid rgba(245,166,35,.34);
+  box-shadow:0 1px 0 rgba(255,255,255,.06) inset,0 14px 30px -18px rgba(245,166,35,.55),0 18px 40px -28px rgba(0,0,0,.85);
+  transition:transform .18s,box-shadow .18s,border-color .18s}
+.cert-badge:hover{transform:translateY(-2px);border-color:rgba(245,166,35,.55);
+  box-shadow:0 1px 0 rgba(255,255,255,.09) inset,0 18px 38px -16px rgba(245,166,35,.65),0 22px 46px -26px rgba(0,0,0,.9)}
+.cert-seal{flex-shrink:0;width:44px;height:44px;border-radius:12px;display:grid;place-items:center;
+  background:radial-gradient(circle at 30% 25%,#FCD083,#F5A623 58%,#C97F12);
+  box-shadow:0 1px 0 rgba(255,255,255,.55) inset,0 8px 18px -6px rgba(245,166,35,.7)}
+.cert-seal svg{width:23px;height:23px;color:#3a2400}
+.cert-body{display:flex;flex-direction:column;gap:3px;line-height:1.28}
+.cert-body b{font-family:var(--sans);font-weight:700;font-size:15px;color:var(--ink)}
+.cert-hl{color:#F7B53D;font-weight:800;letter-spacing:.01em;white-space:nowrap}
+.cert-body small{font-size:12.5px;color:var(--ink-2);font-family:var(--mono);letter-spacing:.01em}
+.cert-arrow{width:18px;height:18px;margin-left:auto;color:#F7B53D;flex-shrink:0;transition:transform .18s}
+.cert-badge:hover .cert-arrow{transform:translateX(3px)}
+@media(max-width:680px){.cert-badge{gap:11px;padding:12px 14px;margin-top:18px}.cert-seal{width:40px;height:40px}.cert-body b{font-size:13.5px}.cert-body small{font-size:11.5px}}

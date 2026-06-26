@@ -178,3 +178,23 @@
     bstats.forEach(function (el) { nObs.observe(el); });
   }
 })();
+
+/* ──────────────────────────────────────────────────────────────────────────────
+ *  Sticky CTA (porte da LP MySQL): aparece ao rolar para fora do hero.
+ *  Esconde o WhatsApp flutuante enquanto a barra está visível.
+ *  ──────────────────────────────────────────────────────────────────────────── */
+(function () {
+  'use strict';
+  var sticky = document.getElementById('stickyCta');
+  var hero = document.getElementById('top');
+  var fab = document.querySelector('.fab');
+  if (!sticky || !hero) return;
+  var sObs = new IntersectionObserver(function (es) {
+    es.forEach(function (e) {
+      var show = !e.isIntersecting;
+      sticky.classList.toggle('show', show);
+      if (fab) { fab.style.opacity = show ? '0' : ''; fab.style.pointerEvents = show ? 'none' : ''; }
+    });
+  }, { threshold: 0 });
+  sObs.observe(hero);
+})();

@@ -34,7 +34,7 @@ html{scroll-behavior:smooth;scroll-padding-top:88px}
 body{
   background:var(--bg);color:var(--ink);font-family:var(--sans);
   font-size:17px;line-height:1.62;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
-  overflow-x:hidden;position:relative;
+  overflow-x:hidden;position:relative;padding-bottom:96px;
 }
 /* ---- page-wide animated background ---- */
 .page-bg{position:fixed;inset:0;z-index:-1;pointer-events:none;overflow:hidden;
@@ -474,11 +474,46 @@ section{position:relative}
 .foot-legal{margin-top:42px;padding-top:24px;border-top:1px solid var(--line-soft);display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;
   font-family:var(--mono);font-size:11.5px;letter-spacing:.06em;color:var(--ink-3)}
 
-/* ---------- sticky mobile cta ---------- */
-.sticky-cta{position:fixed;left:0;right:0;bottom:0;z-index:60;background:rgba(11,15,26,.95);backdrop-filter:blur(12px);
-  border-top:1px solid var(--line);padding:12px 20px;display:none;align-items:center;justify-content:space-between;gap:14px}
-.sticky-cta .p{font-family:var(--disp);font-weight:800;font-size:16px;color:#fff}
-.sticky-cta .p small{display:block;font-family:var(--mono);font-size:11px;color:var(--blue-3);font-weight:400}
+/* ---------- sticky cta (aparece ao rolar para fora do hero) ---------- */
+.sticky-cta{position:fixed;left:0;right:0;bottom:0;z-index:60;padding:0 0 14px;pointer-events:none;
+  transform:translateY(170%);transition:transform .42s cubic-bezier(.2,.7,.2,1)}
+.sticky-cta.show{transform:translateY(0)}
+.sticky-cta .wrap{pointer-events:none}
+.sticky-bar{pointer-events:auto;display:flex;align-items:center;justify-content:space-between;gap:24px;position:relative;overflow:hidden;
+  padding:14px 14px 14px 22px;border-radius:18px;
+  background:linear-gradient(180deg,rgba(14,19,32,.94),rgba(7,10,18,.94));
+  border:1px solid rgba(10,136,244,.20);backdrop-filter:blur(18px) saturate(1.2);
+  box-shadow:0 1px 0 rgba(255,255,255,.06) inset,0 30px 60px -22px rgba(0,0,0,.85),0 0 60px -30px rgba(10,136,244,.7)}
+.sticky-bar::before{content:"";position:absolute;top:0;left:18px;right:18px;height:1px;
+  background:linear-gradient(90deg,transparent,rgba(58,160,255,.6),transparent)}
+.sticky-msg{display:flex;align-items:center;gap:15px;min-width:0}
+.sticky-ic{flex-shrink:0;width:44px;height:44px;border-radius:13px;display:flex;align-items:center;justify-content:center;color:#fff;
+  background:linear-gradient(155deg,#2A9BFF,#0A5FB0);box-shadow:0 8px 20px -6px rgba(10,136,244,.7),inset 0 1px 0 rgba(255,255,255,.35)}
+.sticky-ic svg{width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:2}
+.sticky-tx{display:flex;flex-direction:column;line-height:1.25;min-width:0}
+.sticky-tx b{font-size:15.5px;font-weight:700;color:#fff;font-family:var(--sans)}
+.sticky-tx span{font-size:13px;color:var(--ink-3);font-family:var(--mono)}
+.sticky-actions{display:flex;gap:12px;flex-shrink:0}
+.spill{display:inline-flex;align-items:center;gap:9px;padding:13px 22px;border-radius:999px;border:1px solid transparent;
+  font-family:var(--sans);font-size:14.5px;font-weight:700;letter-spacing:.01em;white-space:nowrap;cursor:pointer;
+  transition:transform .16s cubic-bezier(.2,.7,.2,1),box-shadow .18s,filter .18s}
+.spill svg{width:18px;height:18px}
+.spill .ar{transition:transform .18s}
+.spill:hover{transform:translateY(-3px)}
+.spill:hover .ar{transform:translateX(4px)}
+.spill--primary{color:#fff;background:linear-gradient(180deg,#2A9BFF,#0A6FD0);
+  box-shadow:0 1px 0 rgba(255,255,255,.4) inset,0 0 0 1px rgba(10,111,208,.5),0 14px 26px -10px rgba(10,136,244,.8),0 4px 8px -3px rgba(0,0,0,.5)}
+.spill--primary:hover{filter:brightness(1.07)}
+.spill--wa{color:#fff;background:linear-gradient(180deg,#2BC15F,#1B8F49);
+  box-shadow:0 1px 0 rgba(255,255,255,.4) inset,0 0 0 1px rgba(31,168,85,.5),0 14px 26px -10px rgba(31,168,85,.75),0 4px 8px -3px rgba(0,0,0,.5)}
+.spill--wa:hover{filter:brightness(1.07)}
+/* esconde o WhatsApp flutuante enquanto a barra está visível (evita duplicar) */
+.fab{transition:transform .2s,box-shadow .2s,opacity .3s}
+@media(max-width:680px){
+  .sticky-tx span{display:none}
+  .sticky-cta .sticky-actions{flex:1}
+  .sticky-actions .spill{flex:1;justify-content:center;padding:13px 14px}
+}
 
 /* ---------- reveal anim ---------- */
 @media (prefers-reduced-motion:no-preference){
@@ -513,9 +548,7 @@ section{position:relative}
   .night .when{text-align:left}
   .final h2{font-size:32px}
   .final .qa--lg .qa__tx{font-size:34px}
-  .sticky-cta{display:flex}
   .stat .v{font-size:38px}
-  body{padding-bottom:72px}
   .timeline{padding:24px 14px 6px}
   .tl-node .lab{font-size:10px}
   .tl-seglab{flex-direction:column;gap:14px}

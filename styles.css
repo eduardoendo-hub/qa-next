@@ -366,7 +366,7 @@ section{position:relative}
 .cert-row b{font-family:var(--mono);font-size:12.5px;font-weight:600;color:var(--ink);text-align:right}
 .cert-foot{margin-top:16px;font-size:13px;line-height:1.55;color:var(--muted);text-align:left;display:flex;gap:9px}
 .cert-foot .mk{color:var(--blue-3);flex-shrink:0}
-@media(max-width:1000px){.ctfl{grid-template-columns:1fr;gap:36px}}
+@media(max-width:1000px){.ctfl{grid-template-columns:minmax(0,1fr);gap:36px}}
 
 /* ---------- para quem ---------- */
 .who-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
@@ -510,9 +510,14 @@ section{position:relative}
 /* esconde o WhatsApp flutuante enquanto a barra está visível (evita duplicar) */
 .fab{transition:transform .2s,box-shadow .2s,opacity .3s}
 @media(max-width:680px){
-  .sticky-tx span{display:none}
-  .sticky-cta .sticky-actions{flex:1}
-  .sticky-actions .spill{flex:1;justify-content:center;padding:13px 14px}
+  .sticky-msg{display:none}
+  .sticky-cta .sticky-actions{flex:1;gap:10px;min-width:0}
+  .spill--primary{flex:1;min-width:0;justify-content:center;padding:13px 14px}
+  .spill--wa{flex:0 0 auto;justify-content:center;padding:13px 15px}
+  .spill--wa .wa-label{display:none}
+  .cert-in{padding:24px 18px}
+  .cert-row{flex-wrap:wrap;gap:2px 14px}
+  .cert-row b{text-align:left}
 }
 
 /* ---------- reveal anim ---------- */
@@ -523,7 +528,7 @@ section{position:relative}
 
 /* ---------- responsive ---------- */
 @media(max-width:1000px){
-  .hero-grid{grid-template-columns:1fr;gap:44px}
+  .hero-grid{grid-template-columns:minmax(0,1fr);gap:44px}
   .hero h1{font-size:42px}
   .qa--lg .qa__tx{font-size:46px}.qa--lg .qa__mk{width:54px;height:54px}
   .relev-grid,.relev-pts,.out-grid,.feat-grid{grid-template-columns:repeat(2,1fr)}
@@ -537,6 +542,9 @@ section{position:relative}
 }
 @media(max-width:680px){
   .wrap{padding:0 20px}
+  .autoviz{grid-template-columns:minmax(0,1fr);gap:22px;padding:20px}
+  .av-side{flex-direction:row;flex-wrap:wrap;justify-content:center}
+  .av-tx b{white-space:normal}
   .btn-lg{white-space:normal;text-align:center;line-height:1.3}
   .tl-node.course .flag{left:auto;right:0;transform:none}
   body{font-size:16px}

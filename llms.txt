@@ -1,0 +1,31 @@
+# QA Next — Imersão em Qualidade, Automação e IA (Impacta × Olhar Digital)
+
+> Curso online ao vivo de QA (Quality Assurance / Qualidade de Software): fundamentos de qualidade e test design, automação de testes com Playwright e testes de API, CI com GitHub Actions, IA generativa aplicada ao QA e preparação para a certificação ISTQB® CTFL v4.0. Formato: 5 noites ao vivo + 1 sábado intensivo, em agosto de 2026. Realização da Faculdade Impacta em parceria com o Olhar Digital.
+
+## Informações essenciais
+- **Modalidade:** 100% online, ao vivo (síncrono). Carga horária: 21 horas.
+- **Datas:** noites de 19, 20, 21, 26 e 27 de agosto de 2026, das 19h às 22h (horário de Brasília); mais o sábado "CTFL Sprint" em 29/08, das 9h às 12h e das 14h às 17h.
+- **Para quem é:** analistas e engenheiros de QA/testes, desenvolvedores que querem migrar para qualidade/automação e profissionais que buscam a certificação ISTQB CTFL.
+- **Certificação:** o curso prepara para a prova ISTQB® CTFL v4.0 (Certified Tester Foundation Level). A prova é externa, realizada e paga separadamente pelo aluno junto ao órgão certificador; o curso não garante aprovação automática.
+- **Case prático:** "Hub de Leitura" — um sistema real de biblioteca usado para praticar testes ao longo do curso, culminando num capstone (dossiê de qualidade).
+- **Certificado:** certificado de conclusão da Faculdade Impacta + gravações por período definido.
+
+## O que o aluno aprende
+- Fundamentos de qualidade, risco de produto, Shift Left e revisão de requisitos assistida por IA
+- Test design: critérios de aceite, técnicas de desenho e testes exploratórios
+- Automação de testes com Playwright e testes de API (Postman)
+- Integração contínua com GitHub Actions
+- IA generativa aplicada ao QA: engenharia de prompts, avaliação de saídas, alucinações, vieses, privacidade e governança
+- Preparação para a certificação ISTQB® CTFL v4.0 (revisão do syllabus + simulado no formato oficial)
+
+## Ferramentas usadas
+Postman, Playwright, GitHub, GitHub Actions, VS Code, Node.js e uma ferramenta de IA generativa autorizada.
+
+## Investimento
+- Lotes: pioneiro R$ 697 · regular R$ 897 · reta final R$ 997 (por ordem de abertura, enquanto houver vagas). Parcelamento disponível no checkout.
+- Incluso em todos os lotes: 21h ao vivo, workbook digital e templates, coleção Postman e repositório Playwright, case "Hub de Leitura" + capstone, sábado CTFL Sprint + simulado, plano de estudo CTFL de 30 dias, certificado Impacta + gravações.
+
+## Links
+- Página do curso: https://impacta.com.br/cursos/qanext/
+- Matrícula (checkout): https://impacta.site.engaged.com.br/p/checkout/tm8cdtdrbf
+- Faculdade Impacta: https://www.impacta.edu.br/

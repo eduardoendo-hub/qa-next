@@ -44,18 +44,25 @@
   "provider": {
     "@type": "EducationalOrganization",
     "name": "Faculdade Impacta",
-    "url": "https://www.impacta.edu.br/"
+    "url": "https://www.impacta.edu.br/",
+    "sameAs": ["https://www.impacta.com.br/"]
   },
   "inLanguage": "pt-BR",
   "courseMode": "online",
   "educationalCredentialAwarded": "Certificado de conclusão Impacta",
   "teaches": "Qualidade de software, test design, testes de API com Postman, automação com Playwright, CI com GitHub Actions, IA generativa aplicada a QA, preparação CTFL",
+  "audience": {
+    "@type": "EducationalAudience",
+    "educationalRole": "Profissionais e estudantes de QA, testes de software e desenvolvimento"
+  },
   "hasCourseInstance": {
     "@type": "CourseInstance",
     "courseMode": "online",
     "courseWorkload": "PT21H",
     "startDate": "2026-08-19",
-    "endDate": "2026-08-29"
+    "endDate": "2026-08-29",
+    "location": {"@type": "VirtualLocation", "url": "https://qanext.technowhub.ai/"},
+    "courseSchedule": {"@type": "Schedule", "startDate": "2026-08-19", "endDate": "2026-08-29", "repeatFrequency": "Weekly", "duration": "PT3H"}
   },
   "offers": [
     {"@type": "Offer", "name": "Lote pioneiro", "price": "697", "priceCurrency": "BRL", "availability": "https://schema.org/LimitedAvailability", "validFrom": "2026-07-04", "priceValidUntil": "2026-07-18", "url": "https://qanext.technowhub.ai/#investimento"},

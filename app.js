@@ -22,7 +22,7 @@
     TICKET_VALUE:    697,            // lote vigente (pioneiro) — referência p/ value
     CURRENCY:        'BRL',
     // Pixel da Meta (QA Next - Impacta) — dispara PageView + InitiateCheckout + Contact:
-    META_PIXEL_ID:   '1635620334168131',
+    META_PIXEL_ID:   '2060479028174243',
   };
 
   var UTM_KEYS = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term'];

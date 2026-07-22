@@ -437,6 +437,15 @@ section{position:relative}
 .lote .meta div{display:flex;justify-content:space-between;font-size:13.5px;color:var(--ink-2)}
 .lote .meta b{color:var(--ink);font-weight:600;font-family:var(--mono)}
 .lote .lcta{margin-top:22px;justify-content:center}
+/* Oferta única (sem esquema de lotes) — card central + preço "de/por" */
+.lotes.single{grid-template-columns:minmax(0,440px);justify-content:center}
+.lotes.single .lote{text-align:center;align-items:center}
+.lotes.single .lote .badge{left:50%;transform:translateX(-50%)}
+.lotes.single .lote .meta{width:100%}
+.lote .price-was{font-family:var(--mono);font-size:14px;letter-spacing:.04em;color:var(--ink-3);margin-top:16px}
+.lote .price-was s{color:var(--ink-2);text-decoration-thickness:1.5px}
+.lotes.single .lote .price{margin-top:2px}
+.lotes.single .lote .lcta{width:100%}
 
 .included{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:34px;margin-top:24px}
 .included h4{font-size:19px;margin-bottom:20px}

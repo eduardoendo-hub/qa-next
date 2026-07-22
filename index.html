@@ -64,11 +64,7 @@
     "location": {"@type": "VirtualLocation", "url": "https://qanext.technowhub.ai/"},
     "courseSchedule": {"@type": "Schedule", "startDate": "2026-08-19", "endDate": "2026-08-29", "repeatFrequency": "Weekly", "duration": "PT3H"}
   },
-  "offers": [
-    {"@type": "Offer", "name": "Lote pioneiro", "price": "697", "priceCurrency": "BRL", "availability": "https://schema.org/LimitedAvailability", "validFrom": "2026-07-04", "priceValidUntil": "2026-07-18", "url": "https://qanext.technowhub.ai/#investimento"},
-    {"@type": "Offer", "name": "Lote regular", "price": "897", "priceCurrency": "BRL", "availability": "https://schema.org/PreOrder", "validFrom": "2026-07-19", "priceValidUntil": "2026-08-02", "url": "https://qanext.technowhub.ai/#investimento"},
-    {"@type": "Offer", "name": "Reta final", "price": "997", "priceCurrency": "BRL", "availability": "https://schema.org/PreOrder", "validFrom": "2026-08-03", "priceValidUntil": "2026-08-16", "url": "https://qanext.technowhub.ai/#investimento"}
-  ]
+  "offers": {"@type": "Offer", "name": "Imersão QA Next — turma agosto/2026", "price": "697", "priceCurrency": "BRL", "availability": "https://schema.org/InStock", "priceValidUntil": "2026-08-16", "url": "https://qanext.technowhub.ai/#investimento"}
 }
 </script>
 <script type="application/ld+json">
@@ -157,7 +153,7 @@
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
         <a href="#programa" class="btn btn-ghost btn-lg">Ver a grade completa</a>
       </div>
-      <p class="hero-note">Lote pioneiro · <b>R$ 697</b> · abertura em 04/07 · enquanto houver vagas</p>
+      <p class="hero-note">De <s>R$ 1.000</s> por <b>R$ 697</b> · condição de lançamento · enquanto houver vagas</p>
     </div>
 
     <!-- esteira de qualidade animada (pipeline + quality gate) -->
@@ -670,67 +666,29 @@
 <section class="sec invest reveal" id="investimento">
   <div class="wrap">
     <div class="sec-head cen">
-      <span class="eyebrow">Investimento · lotes reais</span>
-      <h2>Quem chega antes, paga menos.</h2>
-      <p>Os lotes avançam por data, do pioneiro até o início da turma. Cada um encerra ao atingir o limite de vagas ou na data final — o que vier primeiro.</p>
+      <span class="eyebrow">Investimento</span>
+      <h2>Condição de lançamento da turma.</h2>
+      <p>Uma única condição especial, enquanto houver vagas. As inscrições encerram em 16/08 às 18h — ou quando as vagas se esgotarem, o que vier primeiro.</p>
     </div>
 
-    <!-- TIMELINE / RÉGUA -->
-    <div class="timeline">
-      <div class="tl-head">
-        <span class="t">Linha do tempo dos lotes</span>
-        <span class="n">04 jul → 19 ago 2026</span>
-      </div>
-      <div class="tl-track">
-        <div class="tl-fill"></div>
-        <div class="tl-node on" style="left:2%"><span class="lab">04 jul</span></div>
-        <div class="tl-node" style="left:35%"><span class="lab">19 jul</span></div>
-        <div class="tl-node" style="left:68%"><span class="lab">03 ago</span></div>
-        <div class="tl-node course" style="left:99%"><span class="flag">▶ Curso · 19 ago</span></div>
-      </div>
-      <div class="tl-seglab">
-        <div class="s act"><b>Lote Pioneiro</b><span>04/07 – 18/07</span></div>
-        <div class="s"><b>Lote Regular</b><span>19/07 – 02/08</span></div>
-        <div class="s"><b>Reta Final</b><span>03/08 – 16/08</span></div>
-      </div>
-    </div>
-
-    <div class="lotes">
+    <div class="lotes single">
       <div class="lote active">
-        <span class="badge">Lote atual</span>
-        <span class="ln">Lote pioneiro</span>
+        <span class="badge">Vagas abertas</span>
+        <span class="ln">Imersão QA Next · turma agosto/2026</span>
+        <div class="price-was">De <s>R$ 1.000</s> por</div>
         <div class="price">R$ 697</div>
-        <div class="per">menor preço · primeiras vagas da turma</div>
+        <div class="per">condição de lançamento · enquanto houver vagas</div>
         <div class="meta">
-          <div><span>Período</span><b>04/07 – 18/07</b></div>
+          <div><span>Curso</span><b>19 – 29/08</b></div>
+          <div><span>Formato</span><b>online ao vivo</b></div>
           <div><span>Vagas</span><b>limitadas</b></div>
         </div>
-        <a href="https://impacta.site.engaged.com.br/p/checkout/tm8cdtdrbf" data-cta="checkout" class="btn btn-primary lcta">Garantir lote pioneiro</a>
-      </div>
-      <div class="lote">
-        <span class="ln">Lote regular</span>
-        <div class="price">R$ 897</div>
-        <div class="per">principal janela comercial</div>
-        <div class="meta">
-          <div><span>Período</span><b>19/07 – 02/08</b></div>
-          <div><span>Vagas</span><b>limitadas</b></div>
-        </div>
-        <a href="https://impacta.site.engaged.com.br/p/checkout/tm8cdtdrbf" data-cta="checkout" class="btn btn-ghost lcta">Quero este lote</a>
-      </div>
-      <div class="lote">
-        <span class="ln">Reta final</span>
-        <div class="price">R$ 997</div>
-        <div class="per">última janela antes do início</div>
-        <div class="meta">
-          <div><span>Período</span><b>03/08 – 16/08</b></div>
-          <div><span>Vagas</span><b>últimas</b></div>
-        </div>
-        <a href="https://impacta.site.engaged.com.br/p/checkout/tm8cdtdrbf" data-cta="checkout" class="btn btn-ghost lcta">Quero este lote</a>
+        <a href="https://impacta.site.engaged.com.br/p/checkout/tm8cdtdrbf" data-cta="checkout" class="btn btn-primary lcta">Garantir minha vaga</a>
       </div>
     </div>
 
     <div class="included">
-      <h4>Incluso em todos os lotes</h4>
+      <h4>O que está incluso</h4>
       <div class="inc-grid">
         <div class="inc"><span class="mk">✓</span> 21 horas ao vivo (5 noites + sábado)</div>
         <div class="inc"><span class="mk">✓</span> Workbook digital e templates</div>
@@ -745,7 +703,7 @@
     </div>
 
     <div class="center" style="margin-top:36px">
-      <a href="https://impacta.site.engaged.com.br/p/checkout/tm8cdtdrbf" data-cta="checkout" class="btn btn-primary btn-lg">Garantir minha vaga no lote pioneiro
+      <a href="https://impacta.site.engaged.com.br/p/checkout/tm8cdtdrbf" data-cta="checkout" class="btn btn-primary btn-lg">Garantir minha vaga
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
     </div>
   </div>
@@ -801,7 +759,7 @@
       <a href="#investimento" class="btn btn-primary btn-lg">Garantir minha vaga</a>
       <a href="#programa" class="btn btn-ghost btn-lg">Rever a grade</a>
     </div>
-    <p class="hero-note">Lote pioneiro · <b>R$ 697</b> · abertura em 04/07 · enquanto houver vagas</p>
+    <p class="hero-note">De <s>R$ 1.000</s> por <b>R$ 697</b> · condição de lançamento · enquanto houver vagas</p>
   </div>
 </section>
 
@@ -847,7 +805,7 @@
     <div class="sticky-bar">
       <div class="sticky-msg">
         <span class="sticky-ic"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg></span>
-        <span class="sticky-tx"><b>Garanta sua vaga no QA Next</b><span>Lote pioneiro · R$ 697 · enquanto houver vagas</span></span>
+        <span class="sticky-tx"><b>Garanta sua vaga no QA Next</b><span>De R$ 1.000 por R$ 697 · enquanto houver vagas</span></span>
       </div>
       <div class="sticky-actions">
         <a href="#investimento" class="spill spill--primary">Quero me matricular <span class="ar">→</span></a>

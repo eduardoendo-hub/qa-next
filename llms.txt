@@ -22,8 +22,8 @@
 Postman, Playwright, GitHub, GitHub Actions, VS Code, Node.js e uma ferramenta de IA generativa autorizada.
 
 ## Investimento
-- Lotes: pioneiro R$ 697 · regular R$ 897 · reta final R$ 997 (por ordem de abertura, enquanto houver vagas). Parcelamento disponível no checkout.
-- Incluso em todos os lotes: 21h ao vivo, workbook digital e templates, coleção Postman e repositório Playwright, case "Hub de Leitura" + capstone, sábado CTFL Sprint + simulado, plano de estudo CTFL de 30 dias, certificado Impacta + gravações.
+- Condição de lançamento: R$ 697 (preço cheio R$ 1.000), enquanto houver vagas. Inscrições encerram em 16/08 às 18h ou ao esgotar as vagas. Parcelamento disponível no checkout.
+- Incluso: 21h ao vivo, workbook digital e templates, coleção Postman e repositório Playwright, case "Hub de Leitura" + capstone, sábado CTFL Sprint + simulado, plano de estudo CTFL de 30 dias, certificado Impacta + gravações.
 
 ## Links
 - Página do curso: https://impacta.com.br/cursos/qanext/
